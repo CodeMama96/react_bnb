@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
+import Image from './components/Image'
 
 class TravelList extends Component {
 
-    travelList = () => {
+    // travelList = () => {
         
-        return this.props.travelPics.map(img => <img key={img.id} src={img.image} alt={img.id}/>)
-    }
+    //     return this.props.travelPics.map(img => 
+    //     <div>
+    //     <p>{img.location}</p>
+    //     <p>${img.price} per night </p>
+    //     <img height="300" width="400" crop= "fill" key={img.id} src={img.image} alt={img.id} description={img.description}/>
+    //     <p>{img.description}</p>
+    //     </div>)
+    // }
     render(){
         return(
             <div>
-            {this.travelList()}
+            
+
+            <Image/>
             </div>
         )
     }
