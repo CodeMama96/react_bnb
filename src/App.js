@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { fetchListings } from './actions/listingActions'
 import TravelList from './TravelList'
 
+
+
 class App extends Component {
 
   componentDidMount() {
@@ -23,11 +25,11 @@ class App extends Component {
     return (
 
       <div className="App">
-        
-        
+         <Navbar/>
+            <div>
             <h1>Welcome to React<b>Bnb</b></h1>
             {this.handleLoading()}
-        
+            </div>
        
       </div>
     );

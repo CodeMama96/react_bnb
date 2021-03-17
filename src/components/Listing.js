@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import App from './App'
 
-class Image extends Component {
+class Listing extends Component {
 
 
     travelList = () => {
@@ -30,4 +29,4 @@ class Image extends Component {
 
 //{this.props.travelPics.map((img, index) => 
 //{<img height="300" width="400" crop= "fill" key={img.id} src={img.image} alt={img.id}/>)
-export default Image
+export default Listing

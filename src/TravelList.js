@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Image from './components/Image'
+import Listing from './components/Listing'
 
 class TravelList extends Component {
 
@@ -18,7 +18,7 @@ class TravelList extends Component {
             <div>
             
 
-            <Image/>
+            <Listing/>
             </div>
         )
     }
