@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 
+import {Provider} from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import listingsReducer from './reducers/listingsReducer.js'
+
+//Redux Thunk middleware allows you to write action creators that return a function instead of an action.
+const store =createStore(listingsReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+  <App />
+</Provider>,
   document.getElementById('root')
 );
 
