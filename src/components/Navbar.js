@@ -5,10 +5,10 @@ class Navbar extends Component{
         return (
             <div>
               <ul id="nav">
-                <ol><a href="#">Home</a></ol>
-                <ol><a href="#">About</a></ol>
-                <ol><a href="#">FAQ</a></ol>
-                <ol><a href="#">Contact</a></ol>
+                <ol>Home</ol>
+                <ol>About</ol>
+                <ol>FAQ</ol>
+                <ol>Contact</ol>
               </ul>
             </div>
         );

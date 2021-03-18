@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchListings } from './actions/listingActions'
 import TravelList from './TravelList'
 import Navbar from './components/Navbar'
+import TripFilterBar from './TripFilterBar'
 
 
 
@@ -26,9 +27,11 @@ class App extends Component {
     return (
 
       <div className="App">
+
          <Navbar/>
             <div>
-            <h1>Welcome to React<b>Bnb</b></h1>
+            <h1 className="title">Welcome to React<b>Bnb</b></h1>
+            <TripFilterBar/>
             {this.handleLoading()}
             </div>
        
