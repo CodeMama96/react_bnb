@@ -3,25 +3,28 @@ import Listing from './components/Listing'
 
 class TravelList extends Component {
 
-    // travelList = () => {
+    travelList() {
+        let displayedListings = this.props.travelPics
+        return displayedListings.map(img => 
+        <Listing 
+        location={img.location}
+        price={img.price}
+        description={img.description}
+        image={img.image}
+        />)
         
-    //     return this.props.travelPics.map(img => 
-    //     <div>
-    //     <p>{img.location}</p>
-    //     <p>${img.price} per night </p>
-    //     <img height="300" width="400" crop= "fill" key={img.id} src={img.image} alt={img.id} description={img.description}/>
-    //     <p>{img.description}</p>
-    //     </div>)
-    // }
+    }
+
+    //<img height="300" width="400" crop= "fill" key={img.id} src={img.image} alt={img.id}/> 
     render(){
         return(
-            <div>
-            
-
-            <Listing/>
+            <div className="container">
+            {this.travelList()}
             </div>
         )
     }
+    
 }
+
 
 export default TravelList
