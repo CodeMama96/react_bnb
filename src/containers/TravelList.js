@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Listing from './components/Listing'
+import Listing from '../components/Listing'
 
 class TravelList extends Component {
 

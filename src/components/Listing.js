@@ -1,5 +1,3 @@
-
-
 function Listing(props) {
 
 
