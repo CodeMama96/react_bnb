@@ -1,4 +1,5 @@
 export const fetchListings = () => {
+    
     return (dispatch) => {
         dispatch({type: 'FETCHING_LISTINGS'})
         fetch('http://localhost:3000/listings')

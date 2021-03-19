@@ -1,4 +1,5 @@
 const tripsReducer = (state = {trips: [], loading: false}, action) =>{
+
     switch(action.type){
         case 'FETCHING_TRIPS':
             return{

@@ -5,8 +5,8 @@ import App from './App';
 import {Provider} from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import listingsReducer from './reducers/listingsReducer.js'
-//import tripsReducer from './reducers/tripsReducer'
+// import listingsReducer from './reducers/listingsReducer.js'
+// import tripsReducer from './reducers/tripsReducer'
 //import './bootstrap.min.css';
 import reducer from './reducers/index'
 import './App.css';

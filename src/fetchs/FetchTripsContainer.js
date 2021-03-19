@@ -12,12 +12,13 @@ class FetchTripsContainer extends Component {
 
         this.props.fetchTrips()
       }
+
     handleLoading = () => {
         console.log(this.props.loading)
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
-            return <TripFilterBar travelPics={this.props.trips} />
+            return <TripFilterBar trips={this.props.trips} />
     }
     }
     
@@ -32,9 +33,10 @@ class FetchTripsContainer extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state)
     return {
-      trips: state.listings,
-      loading: state.loading
+      trips: state.tripsReducer.trips,
+      loading: state.tripsReducer.loading
     }
   }
   

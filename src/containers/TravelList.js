@@ -16,7 +16,6 @@ class TravelList extends Component {
         
     }
 
-    //<img height="300" width="400" crop= "fill" key={img.id} src={img.image} alt={img.id}/> 
     render(){
         return(
             <div className="container">

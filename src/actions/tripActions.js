@@ -1,5 +1,5 @@
 export const fetchTrips = () => {
-    
+
     return (dispatch) => {
         dispatch({type: 'FETCHING_TRIPS'})
         fetch('http://localhost:3000/trips')

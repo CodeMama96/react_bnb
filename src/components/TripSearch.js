@@ -1,11 +1,11 @@
 
 function TripSearch(props){
-    debugger
+console.log(props)
     return(
-        <div className="search-items" key={`trip-${props.id}`}>
-            <h2>{props.state_date}</h2>
-            <h2>{props.end_date}</h2>
-            <h2>{props.guest_num}</h2>
+        <div className="trip-search" key={`trip-${props.id}`}>
+            <p>{props.startDate} - {props.endDate}</p>
+            <p>Number of Guest: {props.guest}</p>
+          
         </div>
     )
 }

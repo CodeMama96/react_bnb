@@ -30,8 +30,8 @@ class FetchListingsContainer extends Component {
 }
 const mapStateToProps = state => {
     return {
-      listings: state.listings,
-      loading: state.loading
+      listings: state.listingsReducer.listings,
+      loading: state.listingsReducer.loading
     }
   }
   

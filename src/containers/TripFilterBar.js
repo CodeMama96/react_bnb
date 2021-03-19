@@ -6,9 +6,8 @@ class TripFilterBar extends Component {
 
 
     renderTrips(){
- 
-        let displayedTrips = this.props.trips
 
+        let displayedTrips = this.props.trips
         return displayedTrips.map(trip => 
         <TripSearch 
         startDate={trip.start_date}
@@ -17,8 +16,6 @@ class TripFilterBar extends Component {
 
         />)
     }
-
-  
 
     render(){
         return(
