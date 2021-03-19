@@ -17,10 +17,26 @@ class TripFilterBar extends Component {
         />)
     }
 
+    handleSearchChange = (e) => {
+        const search = e.target.value
+        this.setState({search: search}) // will cause a rerender
+    }
+
+
+
+    handleGuestChange(){
+
+    }
+
     render(){
         return(
             <div className="trip-search">
-            
+            <div>
+                    <input type="text" placeholder="Search Location" onChange={this.handleSearchChange}/>
+                    <input type="date" placeholder="Start Date" onChange={this.handleStartDate}/>
+                    <input type="date" placeholder="End Date" onChange={this.handleEndDate}/>
+                    <input type="text" placeholder="Number of Guest" onChange={this.handleGuestChange}/>
+                </div>
                 {this.renderTrips()}
             
             </div>
