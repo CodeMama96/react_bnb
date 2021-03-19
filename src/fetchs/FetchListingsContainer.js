@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import TravelList from '../containers/TravelList'
-
 import { fetchListings } from '../actions/listingActions'
+import TravelList from '../containers/TravelList'
 
 class FetchListingsContainer extends Component {
 
@@ -17,7 +16,7 @@ class FetchListingsContainer extends Component {
         if(this.props.loading) {
           return <div>Loading...</div>
         } else {
-          return <TravelList travelPics={this.props.travelPics} />
+          return <TravelList listings={this.props.listings} />
         }
       }
     
@@ -31,7 +30,7 @@ class FetchListingsContainer extends Component {
 }
 const mapStateToProps = state => {
     return {
-      travelPics: state.listings,
+      listings: state.listings,
       loading: state.loading
     }
   }

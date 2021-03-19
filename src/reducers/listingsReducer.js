@@ -1,4 +1,5 @@
 const listingsReducer = (state = {listings: [], loading: false}, action) =>{
+    debugger
     switch(action.type){
         case 'FETCHING_LISTINGS':
             return{

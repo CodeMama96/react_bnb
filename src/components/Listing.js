@@ -1,6 +1,4 @@
 function Listing(props) {
-
-
         return(
             <div className="listing" key={`listing-${props.id}`}>
                 <p>{props.location}</p>

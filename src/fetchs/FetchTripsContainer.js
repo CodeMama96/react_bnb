@@ -1,23 +1,47 @@
 import React, {Component} from 'react';
-import { fetchTrips} from './actions/tripActions'
-import TripFilterBar from './containers/TripFilterBar'
+import { connect } from 'react-redux';
+
+import { fetchTrips } from '../actions/tripActions'
+import TripFilterBar from '../containers/TripFilterBar'
 
 
 
 
 class FetchTripsContainer extends Component {
     componentDidMount() {
-  
+
         this.props.fetchTrips()
       }
+    handleLoading = () => {
+        console.log(this.props.loading)
+        if(this.props.loading) {
+            return <div>Loading...</div>
+        } else {
+            return <TripFilterBar travelPics={this.props.trips} />
+    }
+    }
+    
 
     render(){
         return(
-            <div>
-                
+            <div className="TripApp">
+                 {this.handleLoading()}
             </div>
         )
     }
 }
 
-export default FetchTripsContainer 
+const mapStateToProps = state => {
+    return {
+      trips: state.listings,
+      loading: state.loading
+    }
+  }
+  
+  const mapDispatchToProps = dispatch => {
+    return {
+      fetchTrips: () => dispatch(fetchTrips())
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(FetchTripsContainer)

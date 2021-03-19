@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 import Navbar from './components/Navbar'
 
-import FetchTripsContainer from './containers/FetchTripsContainer'
+import FetchTripsContainer from './fetchs/FetchTripsContainer'
 
-import FetchListingsContainer from './containers/FetchListingsContainer'
+import FetchListingsContainer from './fetchs/FetchListingsContainer'
 
 
 

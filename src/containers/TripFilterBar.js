@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import TripSearch from '../components/TripSearch'
 
+
 class TripFilterBar extends Component {
 
 
     renderTrips(){
-        let displayedTrips = this.state.trips
+ 
+        let displayedTrips = this.props.trips
 
         return displayedTrips.map(trip => 
         <TripSearch 
-        startDate={trip.state_date}
+        startDate={trip.start_date}
         endDate={trip.end_date}
         guest={trip.guest_num}
 
@@ -21,10 +23,9 @@ class TripFilterBar extends Component {
     render(){
         return(
             <div className="trip-search">
-                <div>
+            
                 {this.renderTrips()}
-                </div>
-          
+            
             </div>
         )
     }

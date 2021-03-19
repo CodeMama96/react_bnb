@@ -6,15 +6,16 @@ import {Provider} from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import listingsReducer from './reducers/listingsReducer.js'
+//import tripsReducer from './reducers/tripsReducer'
 //import './bootstrap.min.css';
-
+import reducer from './reducers/index'
 import './App.css';
 
 
 // import './index.css'
 
 //Redux Thunk middleware allows you to write action creators that return a function instead of an action.
-const store =createStore(listingsReducer, applyMiddleware(thunk))
+const store =createStore(reducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>

@@ -7,7 +7,7 @@ const tripsReducer = (state = {trips: [], loading: false}, action) =>{
                 loading: true
 
             }
-        case 'ADD_tripS':
+        case 'ADD_TRIPS':
             return {
                 ...state,
                 trips: action.trips,

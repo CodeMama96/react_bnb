@@ -4,7 +4,8 @@ import Listing from '../components/Listing'
 class TravelList extends Component {
 
     travelList() {
-        let displayedListings = this.props.travelPics
+       
+        let displayedListings = this.props.listings
         return displayedListings.map(img => 
         <Listing 
         location={img.location}
