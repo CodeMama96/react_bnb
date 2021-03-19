@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TripSearch from '../components/TripSearch'
-
+import Listing from '../components/Listing'
 
 class TripFilterBar extends Component {
 
@@ -14,25 +14,49 @@ class TripFilterBar extends Component {
         endDate={trip.end_date}
         guest={trip.guest_num}
 
-        />)
+        />
+        )
     }
 
-    handleSearchChange = (e) => {
-        const search = e.target.value
-        this.setState({search: search}) // will cause a rerender
-    }
+    handleSubmit(event) {
+        alert(this.props.value);
+        event.preventDefault();
+      }
 
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
 
 
     handleGuestChange(){
 
     }
 
+    optionList(){
+        return this.props.listings.map(list =>
+            <Listing
+               location={<option value={list.location }>{list.location }</option>
+                  } 
+            />)
+    }
     render(){
         return(
             <div className="trip-search">
+            <form onSubmit={this.handleSubmit}>
+        <label>
+          Pick your location:
+          <select name='location'onChange={this.handleChange}>
+         
+{this.optionList}
+                    <option value={this.optionList}>{this.optionList}</option>
+                  
+                
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
             <div>
-                    <input type="text" placeholder="Search Location" onChange={this.handleSearchChange}/>
                     <input type="date" placeholder="Start Date" onChange={this.handleStartDate}/>
                     <input type="date" placeholder="End Date" onChange={this.handleEndDate}/>
                     <input type="text" placeholder="Number of Guest" onChange={this.handleGuestChange}/>

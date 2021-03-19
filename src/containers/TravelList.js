@@ -12,7 +12,8 @@ class TravelList extends Component {
         price={img.price}
         description={img.description}
         image={img.image}
-        />)
+        />
+        )
         
     }
 
