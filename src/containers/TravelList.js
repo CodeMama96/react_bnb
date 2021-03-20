@@ -6,21 +6,21 @@ class TravelList extends Component {
     travelList() {
        
         let displayedListings = this.props.listings
-        return displayedListings.map(img => 
-        <Listing 
-        location={img.location}
-        price={img.price}
-        description={img.description}
-        image={img.image}
-        />
-        )
+            return displayedListings.map(img => 
+            <Listing 
+                location={img.location}
+                price={img.price}
+                description={img.description}
+                image={img.image}
+            />
+            )
         
     }
 
     render(){
         return(
             <div className="container">
-            {this.travelList()}
+                {this.travelList()}
             </div>
         )
     }
