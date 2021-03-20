@@ -4,12 +4,13 @@ import Option from '../components/Option'
 class OptionContainer extends Component {
 
     optionDropDown(){
-
-        return this.props.listings.map(opt =>
-            <Option
-                location={opt.location}
-            />
-            )
+        <Option/>
+        
+        // return this.props.listings.map(opt =>
+        //     <Option
+        //         location={opt.location}
+        //     />
+        //     )
 
     }
 

@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
+//import { connect } from 'react-redux';
 import Listing from '../components/Listing'
 import OptionContainer from '../containers/OptionContainer'
-import { fetchListings } from '../actions/listingActions'
+//import { fetchListings } from '../actions/listingActions'
 
 class SearchBar extends Component{
 
     componentDidMount() {
   
-        this.props.fetchListings()
+       // this.props.fetchListings()
       }
 
     handleSubmit(event) {
@@ -53,4 +54,18 @@ class SearchBar extends Component{
     }
 }
 
+// const mapStateToProps = state => {
+//     return {
+//       listings: state.listingsReducer.listings,
+//       loading: state.listingsReducer.loading
+//     }
+//   }
+  
+//   const mapDispatchToProps = dispatch => {
+//     return {
+//       fetchListings: () => dispatch(fetchListings())
+//     }
+//   }
+
+//export default connect(mapStateToProps, mapDispatchToProps)(SearchBar)
 export default SearchBar
