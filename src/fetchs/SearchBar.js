@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-//import { connect } from 'react-redux';
-import Listing from '../components/Listing'
-import OptionContainer from '../containers/OptionContainer'
+import { connect } from 'react-redux';
+//import Listing from '../components/Listing'
+
 //import { fetchListings } from '../actions/listingActions'
 
 class SearchBar extends Component{
 
-    componentDidMount() {
+    // componentDidMount() {
   
-       // this.props.fetchListings()
-      }
+    //    this.props.fetchListings()
+    //   }
 
     handleSubmit(event) {
         alert(this.props.value);
@@ -26,21 +26,23 @@ class SearchBar extends Component{
 
     }
 
-    optionList(){
-        return this.props.listings.map(list =>
-            <Listing
-               location={<option value={list.location }>{list.location }</option>
-                  } 
-            />)
-    }
     render(){
+        console.log(this.props)
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Pick your location:
-                        <OptionContainer listings={this.props.listing}/>
-
+                        
+                        <select>
+                            <option >Location</option>
+                            {console.log(this.props)}
+                        {this.props.listings.map((list) => (
+                            <option key={list.id}>{list.location}</option>
+                            )
+                        )
+                        }
+                </select>
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
@@ -54,12 +56,11 @@ class SearchBar extends Component{
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//       listings: state.listingsReducer.listings,
-//       loading: state.listingsReducer.loading
-//     }
-//   }
+const mapStateToProps = state => {
+    return {
+      listings: state.listingsReducer.listings
+    }
+  }
   
 //   const mapDispatchToProps = dispatch => {
 //     return {
@@ -67,5 +68,5 @@ class SearchBar extends Component{
 //     }
 //   }
 
-//export default connect(mapStateToProps, mapDispatchToProps)(SearchBar)
-export default SearchBar
+export default connect(mapStateToProps)(SearchBar)
+// export default SearchBar
