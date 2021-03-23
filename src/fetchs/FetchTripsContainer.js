@@ -24,6 +24,7 @@ class FetchTripsContainer extends Component {
     
 
     render(){
+      //debugger
         return(
             <div className="TripApp">
                  {this.handleLoading()}

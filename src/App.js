@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
-import Navbar from './components/Navbar'
+//import Navbar from './components/Navbar'
 
 import FetchTripsContainer from './fetchs/FetchTripsContainer'
 
 import FetchListingsContainer from './fetchs/FetchListingsContainer'
 
 import SearchBar from './fetchs/SearchBar'
+import './App.css'
 
 
 import {
@@ -23,15 +24,16 @@ class App extends Component {
     return (
       <div className="App">
           <Router>
-            <Navbar/>
-            
               <div>
                 <h1 className="title">Welcome to React<b>Bnb</b></h1>
-                <SearchBar/>
-                    <div><Link to="/trips">Upcoming Trips</Link></div>
+                <div className="background" ></div>
+                  <SearchBar/>
+               
+                    <div>
+                    <Link to="/trips">Upcoming Trips</Link></div>
                         
                         <div><Link to="/listings">View Listings</Link></div>
-                     
+                        
                       <Switch>
                         <Route exact path='/trips' component={FetchTripsContainer}>
                          

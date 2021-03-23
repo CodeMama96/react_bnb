@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 // import tripsReducer from './reducers/tripsReducer'
 //import './bootstrap.min.css';
 import reducer from './reducers/index'
-import './App.css';
+
 
 
 // import './index.css'
