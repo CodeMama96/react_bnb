@@ -26,8 +26,7 @@ class App extends Component {
     const search = e.target.value
     this.setState({search: search}) // will cause a rerender
   }
-// search={this.state.search} handleInputChange={this.handleInputChange}
-  render(){
+render(){
     return (
       <div className="App">
           <Router>
@@ -38,6 +37,7 @@ class App extends Component {
                   <SearchBar/>
                  
                         </div>
+
                       <Switch>
                       
                         <Route exact path='/trips' component={DisplayTripsContainer}>

@@ -14,11 +14,6 @@ class DisplayTripsContainer extends Component {
       }
 
     handleLoading = () => {
-      // const getLocationById = props.listings.filter((list) => {
-      //   //    console.log(typeof(list.id))
-      //   return list.id.toString() === state.tripsReducer.trips.toString();
-      // });
-      // console.log(getLocationById.location);
       
         if(this.props.loading) {
             return <div>Loading...</div>
