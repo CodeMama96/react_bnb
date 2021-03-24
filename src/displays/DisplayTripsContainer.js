@@ -11,11 +11,16 @@ class DisplayTripsContainer extends Component {
       }
 
     handleLoading = () => {
-        
+      // const getLocationById = props.listings.filter((list) => {
+      //   //    console.log(typeof(list.id))
+      //   return list.id.toString() === state.tripsReducer.trips.toString();
+      // });
+      // console.log(getLocationById.location);
+      
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
-            return <TripFilterBar trips={this.props.trips} listings={this.props.listings} />
+            return <TripFilterBar key={this.props.id} trips={this.props.trips} listings={this.props.listings} />
     }
     }
     
@@ -33,8 +38,6 @@ class DisplayTripsContainer extends Component {
 const mapStateToProps = state => {
 
   //const mapListing = state.listingsReducer.listings.map((list)=> list.location)
-
- debugger
     return {
       listings: state.listingsReducer.listings,
       trips: state.tripsReducer.trips,

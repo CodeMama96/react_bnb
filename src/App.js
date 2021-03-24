@@ -5,7 +5,7 @@ import DisplayTripsContainer from './displays/DisplayTripsContainer'
 import FetchListingsContainer from './displays/DisplayListingsContainer'
 
 import SearchBar from './displays/SearchBar'
-import filterLocation from './components/filterLocation'
+
 import './App.css'
 
 
@@ -34,7 +34,6 @@ class App extends Component {
           <Router>
               <div>
                 <h1 className="title">Welcome to React<b>Bnb</b></h1>
-                <filterLocation/> 
                 <div className="background" ></div>
                 <div className="search-bar">
                   <SearchBar/>

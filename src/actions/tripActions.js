@@ -9,6 +9,7 @@ export const fetchTrips = () => {
         .then(response => {
             return response.json()
         }).then(responseJSON => {
+          //  debugger
             dispatch({ type: 'FETCHING_TRIPS', trips: responseJSON})
         })
     }
@@ -17,6 +18,7 @@ export const fetchTrips = () => {
 
 export const createTrips = (trip) => {
     const tripInfo = {trip: {
+
         start_date: trip.startDate,
         end_date: trip.endDate,
         guest_num: trip.guestNum

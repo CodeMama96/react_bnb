@@ -6,6 +6,7 @@ export const fetchListings = () => {
         .then(response => {
             return response.json()
         }).then(responseJSON => {
+      
             dispatch({ type: 'ADD_LISTINGS', listings: responseJSON})
         })
     }
