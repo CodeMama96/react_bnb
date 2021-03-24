@@ -28,7 +28,11 @@ state = {
         )
 
     }
+    sortLocation = (e) =>{
+        
+        //show the images based on location id
 
+    }
 
 
     //binds this will have different context wo the arrow function
@@ -53,7 +57,7 @@ render(){
                             <select name="listing_id" onChange={this.handleFormChange}>
                                 <option>Location</option>
                                         {this.props.listings.map((list) => (
-                                            <option value={list.id}>{list.location}</option>
+                                            <option key={list.id} value={list.id}>{list.location}</option>
                                         )
                                     )
                                     }
@@ -76,6 +80,8 @@ render(){
 
 ///controlled form keeps track of what's written as it's written
 const mapStateToProps = state => {
+
+
     return {
       listings: state.listingsReducer.listings
     }

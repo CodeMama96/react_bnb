@@ -5,26 +5,22 @@ import { fetchTrips } from '../actions/tripActions'
 import TripFilterBar from '../containers/TripFilterBar'
 
 
-
-
-class FetchTripsContainer extends Component {
+class DisplayTripsContainer extends Component {
     componentDidMount() {
-
         this.props.fetchTrips()
       }
 
     handleLoading = () => {
-        console.log(this.props.loading)
+        
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
-            return <TripFilterBar trips={this.props.trips} />
+            return <TripFilterBar trips={this.props.trips} listings={this.props.listings} />
     }
     }
     
 
     render(){
-      //debugger
         return(
             <div className="TripApp">
                  {this.handleLoading()}
@@ -33,9 +29,14 @@ class FetchTripsContainer extends Component {
     }
 }
 
+
 const mapStateToProps = state => {
-  console.log(state)
+
+  //const mapListing = state.listingsReducer.listings.map((list)=> list.location)
+
+ debugger
     return {
+      listings: state.listingsReducer.listings,
       trips: state.tripsReducer.trips,
       loading: state.tripsReducer.loading
     }
@@ -47,4 +48,4 @@ const mapStateToProps = state => {
     }
   }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FetchTripsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayTripsContainer)

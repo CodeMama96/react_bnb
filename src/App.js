@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 
-import FetchTripsContainer from './displays/DisplayTripsContainer'
+import DisplayTripsContainer from './displays/DisplayTripsContainer'
 
 import FetchListingsContainer from './displays/DisplayListingsContainer'
 
 import SearchBar from './displays/SearchBar'
+import filterLocation from './components/filterLocation'
 import './App.css'
 
 
@@ -18,12 +19,22 @@ import {
 
 class App extends Component {
 
+  state = {
+    search: ""
+  }
+
+  handleInputChange = (e) => {
+    const search = e.target.value
+    this.setState({search: search}) // will cause a rerender
+  }
+// search={this.state.search} handleInputChange={this.handleInputChange}
   render(){
     return (
       <div className="App">
           <Router>
               <div>
                 <h1 className="title">Welcome to React<b>Bnb</b></h1>
+                <filterLocation/> 
                 <div className="background" ></div>
                 <div className="search-bar">
                   <SearchBar/>
@@ -34,7 +45,7 @@ class App extends Component {
                         <div><Link to="/listings">View Listings</Link></div>
                         </div>
                       <Switch>
-                        <Route exact path='/trips' component={FetchTripsContainer}>
+                        <Route exact path='/trips' component={DisplayTripsContainer}>
                          
                         </Route>
                         <Route exact path='/listings' component={FetchListingsContainer}>
