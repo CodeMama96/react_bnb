@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { fetchListings } from '../actions/listingActions'
 import TravelList from '../containers/TravelList'
 
+import {
+  Link
+} from "react-router-dom";
+
+
 class FetchListingsContainer extends Component {
 
     componentDidMount() {
@@ -23,6 +28,8 @@ class FetchListingsContainer extends Component {
     render(){
         return(
             <div className="ListApp">
+            <div><Link to="/trips">Upcoming Trips</Link></div>      
+                      
                 {this.handleLoading()}
             </div>
         )

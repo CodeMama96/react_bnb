@@ -18,7 +18,7 @@ export const fetchTrips = () => {
 
 export const createTrips = (trip) => {
     const tripInfo = {trip: {
-
+        listing_id: trip.listing_id,
         start_date: trip.startDate,
         end_date: trip.endDate,
         guest_num: trip.guestNum

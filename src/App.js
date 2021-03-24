@@ -12,8 +12,7 @@ import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -38,17 +37,14 @@ class App extends Component {
                 <div className="search-bar">
                   <SearchBar/>
                  
-                    <div>
-                    <Link to="/trips">Upcoming Trips</Link></div>
-                        
-                        <div><Link to="/listings">View Listings</Link></div>
                         </div>
                       <Switch>
+                      
                         <Route exact path='/trips' component={DisplayTripsContainer}>
-                         
+                        
                         </Route>
                         <Route exact path='/listings' component={FetchListingsContainer}>
-                          
+                        
                        </Route>
                       </Switch>
 

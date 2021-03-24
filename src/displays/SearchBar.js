@@ -6,6 +6,7 @@ class SearchBar extends Component{
 
 state = {
     trips: [],
+    listing_id: '',
     startDate: '',
     endDate: '',
     guestNum: ''
@@ -14,11 +15,17 @@ state = {
     handleSubmit = (event)=>{
         event.preventDefault();
         this.props.createTrips(this.state)
+        this.setState({
+            trips: [],
+            listing_id: '',
+            startDate: '',
+            endDate: '',
+            guestNum: ''
+        })
       }
 
 
     handleFormChange = (e) =>{
-
         const name = e.target.name
         const value = e.target.value
 
@@ -28,26 +35,8 @@ state = {
         )
 
     }
-    sortLocation = (e) =>{
-        
-        //show the images based on location id
-
-    }
 
 
-    //binds this will have different context wo the arrow function
-
-//seperate stateless
-//select listing and use that ID when making the trip
-
-//connect trips bar to the store, if I want to put it in a different form
-//keep track of what they type in the store
-//react - form parent comp would have the information of the function and how it would change state and pass down to child and then child would call function
- //54 - displaying but no value, this.setState, use name and value.
- //this.props.handleChange get from parent -
-
- //matters where fetches, fetch listings 
- //draw structure of application 
 
 render(){
         console.log(this.props)
@@ -63,9 +52,7 @@ render(){
                                     }
                             </select>
                        
-                  
                 
-                    
                         <input type="date" placeholder="Start Date" name="startDate" onChange={this.handleFormChange} value={this.state.startDate}/>
                         <input type="date" placeholder="End Date" name="endDate" onChange={this.handleFormChange} value={this.state.endDate}/>
                         <input type="text" placeholder="Number of Guest" name="guestNum" onChange={this.handleFormChange} value={this.state.guestNum}/>
