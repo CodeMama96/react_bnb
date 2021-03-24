@@ -8,6 +8,7 @@ class TravelList extends Component {
         let displayedListings = this.props.listings
             return displayedListings.map(img => 
             <Listing 
+                key={img.id}
                 location={img.location}
                 price={img.price}
                 description={img.description}

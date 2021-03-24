@@ -37,7 +37,6 @@ export const createTrips = (trip) => {
         .then(response => {
             return response.json()
         }).then(responseJSON => {
-           debugger
             dispatch({ type: 'ADD_TRIPS', trip: responseJSON})
         })
     }

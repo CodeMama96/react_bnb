@@ -12,9 +12,7 @@ state = {
 
 }
     handleSubmit = (event)=>{
-       
         event.preventDefault();
-       
         this.props.createTrips(this.state)
       }
 
@@ -35,32 +33,41 @@ state = {
 
     //binds this will have different context wo the arrow function
 
+//seperate stateless
+//select listing and use that ID when making the trip
 
-    render(){
+//connect trips bar to the store, if I want to put it in a different form
+//keep track of what they type in the store
+//react - form parent comp would have the information of the function and how it would change state and pass down to child and then child would call function
+ //54 - displaying but no value, this.setState, use name and value.
+ //this.props.handleChange get from parent -
+
+ //matters where fetches, fetch listings 
+ //draw structure of application 
+
+render(){
         console.log(this.props)
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                        <label>
-                            Pick your location:
-                            <select>
-                                <option >Location</option>
+                            <select name="listing_id" onChange={this.handleFormChange}>
+                                <option>Location</option>
                                         {this.props.listings.map((list) => (
-                                            <option key={list.id}>{list.location}</option>
+                                            <option value={list.id}>{list.location}</option>
                                         )
                                     )
                                     }
                             </select>
-                        </label>
-                    </form>
-                <div>
-                    <form onSubmit={this.handleSubmit}>
+                       
+                  
+                
+                    
                         <input type="date" placeholder="Start Date" name="startDate" onChange={this.handleFormChange} value={this.state.startDate}/>
                         <input type="date" placeholder="End Date" name="endDate" onChange={this.handleFormChange} value={this.state.endDate}/>
                         <input type="text" placeholder="Number of Guest" name="guestNum" onChange={this.handleFormChange} value={this.state.guestNum}/>
                         <input type="submit" value="Submit" />
                     </form>
-                </div>
+               
                
             </div>
         )

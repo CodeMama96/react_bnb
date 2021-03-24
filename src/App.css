@@ -8,6 +8,7 @@
   font-weight: bold;
 		color: #069;
     font-family: 'Roboto';
+
 }
 
 
@@ -42,5 +43,29 @@
 .background{
 	background-image: url('./images/background.png');
 	background-repeat: no-repeat;
-	height: 400px
+	height: 400px;
+
+
+	
+}
+
+.search-bar{
+	text-align: center;
+	
+	border: 0.2em solid #E59DAC;
+    border-radius: 0.5em;
+
+    width: 100%;
+    height: 100%;
+
+	background-color: #E59DD0;
+    opacity: 2;
+
+    font-weight: bold;
+    color: #035E7B;
+
+}
+
+.listing{
+	border-style: groove;
 }
