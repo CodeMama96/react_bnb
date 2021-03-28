@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchTrips } from '../actions/tripActions'
 import TripFilterBar from '../containers/TripFilterBar'
+
 import {
   Link
 } from "react-router-dom";
@@ -26,7 +27,7 @@ class DisplayTripsContainer extends Component {
     render(){
         return(
             <div className="TripApp">
-                <div><Link to="/listings">View Listings</Link></div>
+                <div><Link to="/">View Listings</Link></div>
                 {this.handleLoading()}
                  
             </div>

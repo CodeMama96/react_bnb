@@ -45,7 +45,7 @@ render(){
                       <Switch>
                       
                         <Route exact path='/trips' component={DisplayTripsContainer}></Route>
-                        <Route exact path='/listings' component={DisplayListingsContainer}></Route>
+                        <Route exact path='/' component={DisplayListingsContainer}></Route>
                       </Switch>
 
               </div>

@@ -36,7 +36,7 @@ state = {
 
     }
 
-
+//why is it showing as an array[0] here in console?
 
 render(){
         console.log(this.props)

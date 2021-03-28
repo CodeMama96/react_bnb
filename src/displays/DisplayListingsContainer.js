@@ -46,9 +46,6 @@ class DisplayListingsContainer extends Component {
   // }
   // }
 const mapStateToProps = state => {
-  console.log(state.listingsReducer.listings.location)
-
-
     return {
      
       listings: state.listingsReducer.listings,
