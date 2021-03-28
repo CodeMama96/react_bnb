@@ -42,8 +42,8 @@ render(){
         console.log(this.props)
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                            <select name="listing_id" onChange={this.handleFormChange}>
+                <form  onSubmit={this.handleSubmit}>
+                            <select className="trip-bar" name="listing_id" onChange={this.handleFormChange}>
                                 <option>Location</option>
                                         {this.props.listings.map((list) => (
                                             <option key={list.id} value={list.id}>{list.location}</option>
@@ -53,10 +53,10 @@ render(){
                             </select>
                        
                 
-                        <input type="date" placeholder="Start Date" name="startDate" onChange={this.handleFormChange} value={this.state.startDate}/>
-                        <input type="date" placeholder="End Date" name="endDate" onChange={this.handleFormChange} value={this.state.endDate}/>
-                        <input type="text" placeholder="Number of Guest" name="guestNum" onChange={this.handleFormChange} value={this.state.guestNum}/>
-                        <input type="submit" value="Submit" />
+                        <input className="trip-element" type="date" placeholder="Start Date" name="startDate" onChange={this.handleFormChange} value={this.state.startDate}/>
+                        <input className="trip-element" type="date" placeholder="End Date" name="endDate" onChange={this.handleFormChange} value={this.state.endDate}/>
+                        <input className="trip-element" type="text" placeholder="Number of Guest" name="guestNum" onChange={this.handleFormChange} value={this.state.guestNum}/>
+                        <input className="trip-element"type="submit" value="Submit" />
                     </form>
                
                

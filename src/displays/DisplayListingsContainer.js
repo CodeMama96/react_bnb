@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 
-class FetchListingsContainer extends Component {
+class DisplayListingsContainer extends Component {
 
     componentDidMount() {
   
@@ -27,7 +27,7 @@ class FetchListingsContainer extends Component {
     render(){
         return(
             <div className="ListApp">
-            <div><Link to="/trips">Upcoming Trips</Link></div>      
+            <div><Link to="/trips">Upcoming Trips</Link></div><br></br>    
                       
                 {this.handleLoading()}
             </div>
@@ -61,4 +61,4 @@ const mapStateToProps = state => {
       fetchListings: () => dispatch(fetchListings())
     }
   }
-export default connect(mapStateToProps, mapDispatchToProps)(FetchListingsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayListingsContainer)

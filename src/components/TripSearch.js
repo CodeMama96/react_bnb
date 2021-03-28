@@ -5,7 +5,7 @@ function TripSearch(props){
 console.log(props)
     return(
         <div className="trip-search" key={`trip-${props.id}`}>
-            <p>{props.listing.location} {props.startDate} - {props.endDate} - Number of Guest: {props.guest}</p>
+            <h4>{props.listing.location} {props.startDate} - {props.endDate} - Number of Guest: {props.guest}</h4>
             
         </div>
     )
