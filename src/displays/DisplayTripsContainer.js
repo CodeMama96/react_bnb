@@ -12,15 +12,14 @@ import {
 class DisplayTripsContainer extends Component {
     componentDidMount() {
         this.props.fetchTrips()
-      }
+    }
 
     handleLoading = () => {
-      
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
             return <TripFilterBar key={this.props.id} trips={this.props.trips} listings={this.props.listings} />
-    }
+        }
     }
     
 
@@ -38,7 +37,6 @@ class DisplayTripsContainer extends Component {
 
 const mapStateToProps = state => {
 
-  //const mapListing = state.listingsReducer.listings.map((list)=> list.location)
     return {
       listings: state.listingsReducer.listings,
       trips: state.tripsReducer.trips,

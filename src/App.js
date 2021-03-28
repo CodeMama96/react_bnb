@@ -35,7 +35,10 @@ render(){
                 <h1 className="title">Welcome
                 <span className="ChangeColor"> To ReactBnb</span>
                 </h1>
-                <div className="background" ></div><br></br>
+                <div className="background-color">
+                <div className="background" ></div>
+                </div><br></br>
+
                 <div className="search-bar">
                   <SearchBar/>
                  
