@@ -4,12 +4,10 @@ const url = 'http://localhost:3000/trips'
 export const fetchTrips = () => {
 
     return (dispatch) => {
-       // dispatch({type: 'FETCHING_TRIPS'})
         fetch(url)
         .then(response => {
             return response.json()
         }).then(responseJSON => {
-          //  debugger
             dispatch({ type: 'FETCHING_TRIPS', trips: responseJSON})
         })
     }
@@ -23,6 +21,7 @@ export const createTrips = (trip) => {
         end_date: trip.endDate,
         guest_num: trip.guestNum
     }}
+
     const configObj = {
         method: 'POST',
         headers: {
@@ -33,8 +32,6 @@ export const createTrips = (trip) => {
     }
 
     return (dispatch) => {
-
-       //dispatch({type: 'FETCHING_TRIPS'})
         fetch(url, configObj)
         .then(response => {
             return response.json()

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import { fetchTrips } from '../actions/tripActions'
-import TripFilterBar from '../containers/TripList'
+import TripList from '../containers/TripList'
 
 import {
   Link
@@ -18,7 +18,7 @@ class DisplayTripsContainer extends Component {
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
-            return <TripFilterBar key={this.props.id} trips={this.props.trips} listings={this.props.listings} />
+            return <TripList key={this.props.id} trips={this.props.trips} listings={this.props.listings} />
         }
     }
     

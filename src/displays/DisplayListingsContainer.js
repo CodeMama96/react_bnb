@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-
 import { fetchListings } from '../actions/listingActions'
 import TravelList from '../containers/TravelList'
 
