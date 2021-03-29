@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import { fetchTrips } from '../actions/tripActions'
-import TripFilterBar from '../containers/TripFilterBar'
+import TripFilterBar from '../containers/TripList'
 
 import {
   Link

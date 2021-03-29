@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import TripSearch from '../components/TripSearch'
+import Trip from '../components/Trip'
 
 
-class TripFilterBar extends Component {
+class TripList extends Component {
 
 
     renderTrips(){
@@ -11,7 +11,7 @@ class TripFilterBar extends Component {
       
         return displayedTrips.map(trip => 
            
-        <TripSearch
+        <Trip
             listing={this.props.listings.find(listing => listing.id === trip.listing_id)}
   
             startDate={trip.start_date}
@@ -31,7 +31,7 @@ class TripFilterBar extends Component {
     }
 }
 
-export default TripFilterBar
+export default TripList
 
 
          

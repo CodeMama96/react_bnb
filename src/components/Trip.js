@@ -1,6 +1,6 @@
 
 
-function TripSearch(props){
+function Trip(props){
 
     
 console.log(props)
@@ -13,4 +13,4 @@ console.log(props)
 }
 
 //will need this to be a seperate link
-export default TripSearch
+export default Trip

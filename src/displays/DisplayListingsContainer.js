@@ -35,16 +35,6 @@ class DisplayListingsContainer extends Component {
     }
 }
 
-  // const mapStateToProps = (state, ownProps) => {
-
-  //   const displayLocations = state.listingsReducer.listings.filter((listing) =>  
-  //     listing.location.toLowerCase().includes(ownProps.searchTerm.toLowerCase()))
-      
-  // return {
-  //   locations: displayLocations,
-  //   loading: state.loading
-  // }
-  // }
 const mapStateToProps = state => {
     return {
      

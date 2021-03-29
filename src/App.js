@@ -33,7 +33,7 @@ render(){
           <Router>
               <div>
                 <h1 className="title">Welcome
-                <span className="ChangeColor"> To ReactBnb</span>
+                <span className="ChangeColor"> To <i>EZ</i>-Bnb</span>
                 </h1>
                 <div className="background-color">
                 <div className="background" ></div>
