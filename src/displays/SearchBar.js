@@ -39,20 +39,10 @@ class SearchBar extends Component{
 //why is it showing as an array[0] here in console?
 
 render(){
-    
-        console.log(this.props)
         return(
             <div>
                 <form  onSubmit={this.handleSubmit}>
                         <OptionDropDown listings={this.props.listings} handleFormChange={this.handleFormChange}/>
-                            {/* <select className="trip-bar" name="listing_id" onChange={this.handleFormChange}>
-                                <OptionDropDown listings={this.props.listings} />
-                                        {this.props.listings.map((list) => (
-                                            <option key={list.id} value={list.id}>{list.location}</option>
-                                        )
-                                    )
-                                    }
-                            </select> */}
                         <input className="trip-element" type="date" placeholder="Start Date" name="startDate" onChange={this.handleFormChange} value={this.state.startDate}/>
                         <input className="trip-element" type="date" placeholder="End Date" name="endDate" onChange={this.handleFormChange} value={this.state.endDate}/>
                         <input className="trip-element" type="text" placeholder="Number of Guest" name="guestNum" onChange={this.handleFormChange} value={this.state.guestNum}/>
