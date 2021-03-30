@@ -33,7 +33,7 @@ class DisplayTripsContainer extends Component {
         )
     }
 }
-
+//Add a button to sort by locations
 
 const mapStateToProps = state => {
 

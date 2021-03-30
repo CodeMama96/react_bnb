@@ -42,9 +42,25 @@ export const createTrips = (trip) => {
 }
 
 export const removeTrip = trip => {
-    return {
-      type: "REMOVE_TRIP",
-      payload: { trip }
+   
+
+    const configObj = {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+    }
+
+    return (dispatch) =>{
+
+        fetch(url+`/${trip.id}`, configObj)
+        .then(response => {
+            return response.json()
+        }).then(responseJSON => {
+            dispatch({ type: 'REMOVE_TRIP', trip: responseJSON})
+        })
+   
     };
   };
   

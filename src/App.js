@@ -4,6 +4,8 @@ import DisplayListingsContainer from './displays/DisplayListingsContainer'
 import SearchBar from './displays/SearchBar'
 import './App.css'
 import './index.css'
+import { fetchListings } from './actions/listingActions'
+import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +17,11 @@ class App extends Component {
 
   state = {
     search: ""
+  }
+
+  componentDidMount() {
+  
+    this.props.fetchListings()
   }
 
   handleInputChange = (e) => {
@@ -48,4 +55,9 @@ render(){
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchListings: () => dispatch(fetchListings())
+  }
+}
+export default connect(null, mapDispatchToProps)(App);

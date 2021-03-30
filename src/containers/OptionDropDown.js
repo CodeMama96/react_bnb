@@ -3,24 +3,31 @@ import Option from '../components/Option'
 
 class OptionDropDown extends Component{
 
+
     dropDown(){
         let displayOptions = this.props.listings
         return displayOptions.map(item =>
             <Option
                 key={item.id}
+                value={item.id}
                 location={item.location}
             />
             )
     }
 
     render(){
+        
+        console.log(this.props)
         return(
-            <div className="options-container">
+            
+            <select className="trip-bar" name="listing_id" onChange={this.props.handleFormChange}>
                 {this.dropDown()}
-            </div>
+            </select>
+                
         )
     }
 
 }
+// this.props. -- because it's a class component
 
 export default OptionDropDown

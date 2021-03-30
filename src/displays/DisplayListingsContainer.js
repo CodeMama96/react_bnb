@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { fetchListings } from '../actions/listingActions'
+// import { fetchListings } from '../actions/listingActions'
 import TravelList from '../containers/TravelList'
 
 import {
@@ -10,10 +10,10 @@ import {
 
 class DisplayListingsContainer extends Component {
 
-    componentDidMount() {
+    // componentDidMount() {
   
-        this.props.fetchListings()
-      }
+    //     this.props.fetchListings()
+    //   }
     
       handleLoading = () => {
         if(this.props.loading) {
@@ -42,9 +42,9 @@ const mapStateToProps = state => {
     }
   }
   
-  const mapDispatchToProps = dispatch => {
-    return {
-      fetchListings: () => dispatch(fetchListings())
-    }
-  }
-export default connect(mapStateToProps, mapDispatchToProps)(DisplayListingsContainer)
+  // const mapDispatchToProps = dispatch => {
+  //   return {
+  //     fetchListings: () => dispatch(fetchListings())
+  //   }
+  // }
+export default connect(mapStateToProps)(DisplayListingsContainer)

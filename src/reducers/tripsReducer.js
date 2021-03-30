@@ -14,10 +14,12 @@ const tripsReducer = (state = {trips: []}, action) =>{
             }
 
         case 'REMOVE_TRIP':
-            let newTrips = [...state.trips];
-            newTrips.splice(state.trips.indexOf(action.book), 1);
-            return newTrips;
+            let idx = state.trips.findIndex(p => p.id === action.trip.id)
         
+            return { 
+                ...state, 
+                trips: [...state.trips.slice(0, idx), ...state.trips.slice(idx + 1)]
+            }
         default:
             return state;
     }

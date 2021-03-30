@@ -1,9 +1,8 @@
 function Option(props){
     return(
-        <div className="option-drop-down">
-            <option>Location</option>
-            <option key={props.id} value={props.id}>{props.location}</option>
-        </div>
+    
+            <option value={props.value} placeholder="Location"> {props.location}</option>
+        
     )
 }
 
