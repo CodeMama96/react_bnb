@@ -2,15 +2,19 @@
 
 function Trip(props){
 
+    // const handleRemoveTrip = (e, trip) => {
+    //     e.stopPropagation();
+    //     props.removeTrip(trip);
+    //   };
     
-console.log(props)
     return(
         <div className="trip-search" key={`trip-${props.id}`}>
             <h4>{props.listing.location} {props.startDate} - {props.endDate} - Number of Guest: {props.guest}</h4>
-            
+            {/* <button  onClick={e => handleRemoveTrip(e, trip)}>
+            X
+          </button> */}
         </div>
     )
 }
 
-//will need this to be a seperate link
 export default Trip
