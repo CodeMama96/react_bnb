@@ -10,9 +10,12 @@ const Trip = props =>{
    
     return(
         <div className="trip-search" key={`trip-${props.id}`}>
-            <h4>{props.listing.location} {props.startDate} - {props.endDate} - Number of Guest: {props.guest}</h4>
-            <button  onClick={handleRemoveTrip}>
-            Delete
+            <h3>{props.listing.location} </h3>
+            <h4>From:{props.startDate}   To:{props.endDate}</h4>
+            <h4>Number of Guest: {props.guest}
+            </h4>
+            <button  className='delete-btn' onClick={handleRemoveTrip}>
+            X
           </button>
         </div>
     )

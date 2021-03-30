@@ -88,3 +88,7 @@ img {
 	border: 2px solid #eee;
 	border-radius:7px;
 }
+
+.delete-btn{
+	border: 0.1em solid #eb4034;
+}
