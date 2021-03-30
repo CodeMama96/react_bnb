@@ -1,6 +1,7 @@
+// import { connect } from "react-redux";
+// import {removeTrip} from '../actions/tripActions'
 
-
-function Trip(props){
+const Trip = props =>{
 
     // const handleRemoveTrip = (e, trip) => {
     //     e.stopPropagation();
@@ -10,7 +11,7 @@ function Trip(props){
     return(
         <div className="trip-search" key={`trip-${props.id}`}>
             <h4>{props.listing.location} {props.startDate} - {props.endDate} - Number of Guest: {props.guest}</h4>
-            {/* <button  onClick={e => handleRemoveTrip(e, trip)}>
+            {/* <button  onClick={handleRemoveTrip}>
             X
           </button> */}
         </div>

@@ -40,3 +40,11 @@ export const createTrips = (trip) => {
         })
     }
 }
+
+export const removeTrip = trip => {
+    return {
+      type: "REMOVE_TRIP",
+      payload: { trip }
+    };
+  };
+  

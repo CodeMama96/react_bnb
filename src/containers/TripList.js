@@ -3,8 +3,7 @@ import Trip from '../components/Trip'
 
 
 class TripList extends Component {
-
-
+    
     renderTrips(){
 
         let displayedTrips = this.props.trips 
@@ -32,9 +31,3 @@ class TripList extends Component {
 }
 
 export default TripList
-
-
-         
-// {this.optionList}
-//                     <option value={this.optionList}>{this.optionList} something</option>
-                  
