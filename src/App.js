@@ -12,6 +12,8 @@ import {
   Route
 } from "react-router-dom";
 
+import About from './About'
+
 
 
 
@@ -46,11 +48,14 @@ render(){
 
                      <div className="search-bar">
                       <SearchBar/>
-                 
+                      
                         </div><br></br>
+                        <Route exact path='/' component={DisplayListingsContainer}></Route>
                       <Switch>
                         <Route exact path='/trips' component={DisplayTripsContainer}></Route>
-                        <Route exact path='/' component={DisplayListingsContainer}></Route>
+                       
+                        <Route exact path='/about' component={About}></Route>
+                        
                       </Switch>
                       </div>
           </Router>

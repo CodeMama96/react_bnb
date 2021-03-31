@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-// import { fetchListings } from '../actions/listingActions'
+
 import TravelList from '../containers/TravelList'
 
 import {
@@ -9,11 +9,6 @@ import {
 
 
 class DisplayListingsContainer extends Component {
-
-    // componentDidMount() {
-  
-    //     this.props.fetchListings()
-    //   }
     
       handleLoading = () => {
         if(this.props.loading) {
@@ -26,9 +21,11 @@ class DisplayListingsContainer extends Component {
     render(){
         return(
             <div className="ListApp">
+            <div><Link to="/about">About EZ Bnb</Link></div><br></br>
             <div><Link to="/trips">Upcoming Trips</Link></div><br></br>    
                       
                 {this.handleLoading()}
+
             </div>
         )
     }
@@ -42,9 +39,4 @@ const mapStateToProps = state => {
     }
   }
   
-  // const mapDispatchToProps = dispatch => {
-  //   return {
-  //     fetchListings: () => dispatch(fetchListings())
-  //   }
-  // }
 export default connect(mapStateToProps)(DisplayListingsContainer)
