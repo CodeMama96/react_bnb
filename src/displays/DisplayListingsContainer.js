@@ -21,11 +21,11 @@ class DisplayListingsContainer extends Component {
     render(){
         return(
             <div className="ListApp">
-            <div><Link to="/about">About EZ Bnb</Link></div><br></br>
+           
             <div><Link to="/trips">Upcoming Trips</Link></div><br></br>    
                       
-                {this.handleLoading()}
-
+                {this.handleLoading()}<br></br>
+                <small><Link to="/about">About</Link></small>
             </div>
         )
     }
