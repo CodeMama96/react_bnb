@@ -17,6 +17,7 @@ class TripList extends Component {
             endDate={trip.end_date}
             guest={trip.guest_num}
             trip={trip}
+        
         />
         )
     }

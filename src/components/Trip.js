@@ -1,7 +1,10 @@
 import { connect } from "react-redux";
 import {removeTrip} from '../actions/tripActions'
+import Likes from '../containers/Likes'
 
 const Trip = props =>{
+
+ 
 
     const handleRemoveTrip = (e) => {
         e.stopPropagation();
@@ -17,6 +20,7 @@ const Trip = props =>{
             <button  className='delete-btn' onClick={handleRemoveTrip}>
             X
           </button>
+         <Likes/>
         </div>
     )
 }

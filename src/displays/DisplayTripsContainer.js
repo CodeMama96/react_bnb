@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchTrips } from '../actions/tripActions'
 import TripList from '../containers/TripList'
 
+
 import {
   Link
 } from "react-router-dom";
@@ -11,7 +12,9 @@ import {
 
 class DisplayTripsContainer extends Component {
     componentDidMount() {
+      console.log("a")
         this.props.fetchTrips()
+      console.log("b")
     }
 
     handleLoading = () => {
@@ -21,13 +24,17 @@ class DisplayTripsContainer extends Component {
             return <TripList key={this.props.id} trips={this.props.trips} listings={this.props.listings} />
         }
     }
-    
 
+    addLikes
+    
     render(){
         return(
             <div className="TripApp">
+            <input type="number" value='0' onClick={this.addLikes}></input>
                 <div><Link to="/">View Listings</Link></div>
                 {this.handleLoading()}
+
+
                  
             </div>
         )

@@ -4,10 +4,12 @@ const url = 'http://localhost:3000/trips'
 export const fetchTrips = () => {
 
     return (dispatch) => {
+        console.log("c")
         fetch(url)
         .then(response => {
             return response.json()
         }).then(responseJSON => {
+            console.log("d")
             dispatch({ type: 'FETCHING_TRIPS', trips: responseJSON})
         })
     }

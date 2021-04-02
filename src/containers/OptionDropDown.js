@@ -17,7 +17,6 @@ class OptionDropDown extends Component{
 
     render(){
         
-        console.log(this.props)
         return(
             
             <select className="trip-bar" name="listing_id" onChange={this.props.handleFormChange}>
