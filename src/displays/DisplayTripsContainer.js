@@ -30,7 +30,7 @@ class DisplayTripsContainer extends Component {
     render(){
         return(
             <div className="TripApp">
-            <input type="number" value='0' onClick={this.addLikes}></input>
+            <input type="hidden" value='0' onClick={this.addLikes}></input>
                 <div><Link to="/">View Listings</Link></div>
                 {this.handleLoading()}
 
